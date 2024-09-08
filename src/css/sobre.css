@@ -1,0 +1,185 @@
+.container_sobre {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.backgraund-image {
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backgraund-image img {
+    width: 50vw;
+    height: 750px;
+    object-fit: cover;
+}
+
+.texto-sobre {
+    width: 45vw;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.titulo-sobre {
+    color: var(--rosa);
+    font-family: var(--titulo);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.parrafo-sobre {
+    color: var(--gris-oscuro);
+    font-family: var(--texto);
+    text-align: justify;
+    font-size: 20px
+}
+
+button {
+    background: var(--rosa);
+	padding: 10px 40px;
+    margin-top: 20px;
+	border: none;
+	border-radius: 15px;
+	font-size: 20px;
+	font-family: var(--texto);
+	font-weight: bold;
+	color:white;
+	cursor: pointer;
+}
+
+.container-programas {
+    background: var(--lavanda);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.tarjetas {
+    width: 27vw;
+    height: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    font-family: var(--texto);
+    color: var(--gris-oscuro);
+}
+
+.titulo_tarjeta {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.parrafo-tarjeta {
+    text-align: justify;
+    white-space: pre-line;
+}
+
+.parrafo-tarjeta span {
+    font-style: italic;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.container-iconos {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iconos-apps {
+    margin: 10px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container_sobre {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .backgraund-image {
+        display: none;
+    }
+    
+    .texto-sobre {
+        width: auto;
+        height: auto;
+        padding: 30px;
+    }
+    
+    .titulo-sobre {
+        font-size: 30px,
+    }
+    
+    .parrafo-sobre {
+        font-size: 14px;
+    }
+    
+    .container-programas{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .tarjetas {
+        width: 80vw;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container_sobre {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .backgraund-image {
+        display: none;
+    }
+
+    .texto-sobre {
+        width: auto;
+        height: auto;
+        padding: 50px;
+    }
+    
+    .titulo-sobre {
+        font-size: 30px,
+    }
+    
+    .parrafo-sobre {
+        font-size: 14px;
+    }
+    
+    button {
+        margin-top: 40px;
+    }
+    
+    .container-programas{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .tarjetas {
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}

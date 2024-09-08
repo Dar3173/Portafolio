@@ -1,0 +1,192 @@
+.disenos {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url("../assets/img/backgraund_2.png") center / cover no-repeat fixed;
+}
+
+.container-disenos {
+    width: 100vw;
+    padding: 10px 50px;
+    font-family: var(--texto);
+    display: flex;
+    align-items: center;
+}
+
+.container-texto {
+    flex: 1;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.negro {
+    color: var(--gris-oscuro);
+}
+
+.titulo-diseno {
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.texto-diseno {
+    text-align: justify;
+    font-size: 17px;
+}
+
+.container-img {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.derecha {
+    padding-right: 80px;
+}
+
+.imagenes {
+    max-height: 85%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.imagenes:hover {
+   transform: scale(1.05); 
+}
+
+.aqua {
+    background: var(--aqua);
+}
+
+.izquierda {
+    padding-left: 80px;
+}
+
+.container-img .imagenes {
+    transform: scale(0);
+    transition: transform 2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.texto-derecha {
+    text-align: right;
+}
+
+.blanco {
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.btn-esbalca {
+    margin-top: 20px;
+    color: var(--gris-oscuro);
+    text-align: right;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border: 1px solid var(--gris-oscuro);
+    border-radius: 15px;
+    text-decoration: none;
+    background: var(--aqua);
+}
+
+.btn-esbalca:hover {
+    font-size: 25px;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container-disenos {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .container-texto {
+        padding: 20px;
+    }
+    
+    .titulo-diseno {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .texto-diseno {
+        font-size: 14px;
+    }
+
+    .container-img {
+        height: auto;
+        position: static;
+        padding: 0;
+    }
+
+    .imagenes {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .jpg {
+        width: 250;
+    }
+    
+    .none {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container-disenos {
+        padding: 50px 30px;
+    }
+    
+    .container-texto {
+        padding: 30px;
+    }
+    
+    .titulo-diseno {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .texto-diseno {
+        font-size: 15px;
+    }
+    
+    .container-img {
+        height: auto;
+        position: static;
+        padding: 30px;
+    }
+
+    .imagenes {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .jpg{
+        width: 250px;
+    }
+    
+    .none {
+        display: none;
+    }  
+}
+
