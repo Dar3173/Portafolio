@@ -22,25 +22,23 @@
     font-weight: 900;
     cursor: pointer;
     z-index: 3;
-    display: block;
 }
 
 #aside {
     background-color: var(--aqua-opacidad);
     width: 30vw;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom:0;
     padding-top: 100px;
     overflow-y: hidden;
-    transform: translateX(100%);
     transition: transform 0.5s;
     z-index: 2;
 }
 
 .desplegar {
-    transform: translateX(0); 
+    transform: translateX(100%); /* Muestra el menú cuando la clase 'desplegar' se aplica */
 }
 
 .container-svg {
@@ -52,9 +50,9 @@
 
 .container-svg:not(:last-child) {
     border-bottom: 3px solid white;
-}
+} 
 
-.container-svg div a span {
+.container-svg div a span{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -80,23 +78,32 @@
     font-weight: 800;
 }
 
-/* Estilos responsive */
-@media screen and (max-width: 600px), screen and (max-width: 1024px) {
-    .menu {
+
+@media screen and (max-width: 600px) {
+    .menu{
         width: 100vw;
     }
-
+    
     .logo {
         width: 50px;
     }
-
+    
     #open-close {
         font-size: 30px;
     }
-
+    
     #aside {
         width: 100vw;
         height: 100vh;
-        overflow-y: auto;
+        overflow-y: visible;
+    }
+     
+}
+
+@media screen and (max-width: 1024px) {
+    #aside{
+        width: 100vw;
+        height: 100vh;
+        overflow-y: visible;
     }
 }
