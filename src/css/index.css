@@ -1,5 +1,6 @@
-body{
-    background: url("../assets/img/back.jpg") repeat;
+body {
+    background: url("../assets/img/back.jpg") no-repeat center center;
+    background-size: cover;
 }
 
 #welcome{
@@ -46,14 +47,6 @@ button:hover{
     background: var(--aqua);
 }
 
-video{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	object-fit: cover;
-}
-
 /* Para pantallas pequeñas, de móviles (máximo 768px) */
 @media screen and (max-width: 768px) {
     .texto {
@@ -66,10 +59,6 @@ video{
 
     button {
         font-size: 32px;
-    }
-
-    video {
-        display: none;
     }
 }
 

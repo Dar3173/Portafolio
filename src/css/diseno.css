@@ -14,6 +14,17 @@
     align-items: center;
 }
 
+.container-disenos {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.container-disenos.active {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
 .container-texto {
     flex: 1;
     padding: 0 80px;
@@ -54,12 +65,9 @@
     max-height: 85%;
     max-width: 100%;
     object-fit: contain;
-    transition: transform 0.3s ease;
 }
 
-.imagenes:hover {
-   transform: scale(1.05); 
-}
+
 
 .aqua {
     background: var(--aqua);
@@ -69,10 +77,6 @@
     padding-left: 80px;
 }
 
-.container-img .imagenes {
-    transform: scale(0);
-    transition: transform 2s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
 
 .texto-derecha {
     text-align: right;
