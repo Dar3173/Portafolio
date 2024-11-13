@@ -1,16 +1,12 @@
 .contenedor-info {
     width: 100vw;
-    height: 100vh;
+    height: 84vh;
     display: flex;
     align-items: center;
-    position: fixed;
-    overflow-y: hidden;
 }
 
 .contenedor-texto {
     width: 50vw;
-    height: 90vh;
-    margin-top: 50vh;
     padding-left: 100px;
 }
 
@@ -27,19 +23,152 @@
     font-weight: bold;
 }
 
-.contenedor-img {
-    position: absolute;
-    right: 0;
-    bottom: 100px;
-}
-
 .img {
+    position: relative;
     width: 700px;
+    z-index: 1;
 }
 
 .img-celular {
     display: none;
 }
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.aqua {
+    background: var(--aqua);
+    color: white;
+}
+
+.gris {
+    color: var(--gris-oscuro);
+}
+
+.container-disenos {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.container-disenos.active {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.titulo {
+    margin: 0 55px 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.805);
+}
+
+.titulo-gris {
+    margin: 0 55px 20px;
+    border-bottom: 2px solid #ff6e61da;
+    color: var(--rosa);
+}
+
+.white {
+    font-family: var(--titulo);
+    font-size: 60px;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+    margin: 30px 0 10px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textwhite{
+    padding: 0 40px 50px 40px;
+    text-align: justify;
+    font-family: var(--texto);
+    font-size: 17px;
+}
+
+.gift {
+    margin-right: 70px;
+}
+
+.img-info {
+    position: relative;
+    width: 100vw;
+    z-index: 3;
+}
+
+.img-info-cel {
+    display: none;
+}
+
+.video-info {
+    position: relative;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+
+
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.752);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    top: 3%;
+    left: 74%; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: var(--aqua);
+    font-family: var(--texto);
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;  
+    border-bottom: 15px solid transparent; 
+    border-right: 15px solid transparent;  
+    border-left: 15px solid #fff; 
+    top: 30%;  
+    left: 100%; 
+    transform: translateY(-50%); 
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 25px;
+    color: var(--rosa);
+    cursor: pointer;
+}
+
+
+
 
 @media screen and (max-width: 600px) {
     .contenedor-info {
@@ -50,8 +179,8 @@
         width: 100vw;
         height: 15vh;
         margin-top: 40px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
         text-align: center;
     }
 
@@ -64,7 +193,7 @@
     }
     
     .img {
-       display: none;
+        display: none;
     }
     
     .img-celular {
@@ -72,11 +201,57 @@
         width: 300px;
         position: static;
     }
+
+    .titulo {
+        margin: 0 20px 20px;
+    }
+
+    .white {
+        font-size: 40px;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .textwhite {
+        padding: 0 20px 50px 20px;
+        font-size: 14px;
+    }
+
+    .gif-info , .gift {
+        display: none;
+    }
+
+    .img-info {
+        display: none;
+    }
+
+    .img-info-cel {
+        display: block;
+        width: 100vw;
+    }
+
+    .video-info {
+        margin-top: 0;
+    }
+
+    /*estilo de modal*/
+    .modal-content {
+        width: 200px;
+        top: 10px;
+        left:10px;
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .contenedor-info {
+        height: 55vh;
+    }
+
     .contenedor-texto {
-        padding-left: 50px;
+        padding-left: 45px;
     }
     
     .contenedor-texto p {
@@ -84,7 +259,21 @@
     }
     
     .img{
-        width: 60vw;
+        width: 55vw;
+    }
+
+    .gif-info, .gift { 
+        width: 300px;
+    }
+
+    .gift {
+        margin-right: 20px;
+    }
+
+    /*estilo modal*/
+    .modal-content {
+        top: 2%;
+        left: 24%;
     }
 }
 

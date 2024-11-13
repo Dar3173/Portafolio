@@ -38,7 +38,7 @@
 }
 
 .desplegar {
-    transform: translateX(100%); /* Muestra el menú cuando la clase 'desplegar' se aplica */
+    transform: translateX(100%);
 }
 
 .container-svg {

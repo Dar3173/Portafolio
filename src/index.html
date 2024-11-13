@@ -9,7 +9,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/variables.css"/>
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/welcome.css">
     
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5X6NQVC5K"></script>
@@ -24,13 +25,103 @@
 </head>
 
 <body>
-<main id="welcome">
-		<div class="texto">
-			<h1 class="titulo">¡Bienvenido!</h1>
-			<a href="welcome.html">
-			<button>Entrar</button>
-			</a>		
-		</div>
-  </main>
+	<header> 
+		<nav class="menu">
+            <a href="index.html"><img class="logo" src="assets/img/logo/logo red.png" alt="logo Darlyn" ></a>
+            <span id="open-close">&#9776;</span>
+        </nav>
+        <aside id="aside">
+            <div class="container-svg">
+                <h2 class="title_menu">Proyectos &#62;</h2>
+                <div>
+                    <a href="diseno.html"><span>Diseño</span></a>
+                </div>
+                <div>
+                    <a href="galeria.html"><span>Galeria</span></a>
+                </div>
+                <div>
+                    <a href="web.html"><span>Web</span></a>
+                </div>
+            </div>
+            <div class="container-svg">
+                <div>
+                    <a href="sobreMi.html"><span>Sobre mí</span></a>
+                </div>
+            </div>
+        </aside>
+	</header>
+	
+	<main>
+        <section class="contenedor-info">
+            <div class="contenedor-texto">
+                <p>Hola, 
+                mi nombre es <span class="name">Darlyn Orjuela</span>
+                Soy diseñadora gráfica</p>
+            </div>
+            
+            <div class="contenedor-img">
+                <img src="assets/img/img index.png" class="img" alt="">
+                <img src="assets/img/welcome.png" class="img-celular" alt="">
+            </div>
+        </section>
+
+        <section class="container-infoextra">
+            <div class="container aqua">
+                <div class="titulo"><h2 class="white">Social Media</h2></div>
+                <div class="info container-disenos">
+                    <p class="textwhite">He desarrollado estrategias y contenido para redes sociales en diversos proyectos, creando piezas gráficas, banners y calendarios de contenido para empresas de sectores como construcción, floristería, empleo y viajes. Mis diseños refuerzan la identidad visual y mejoran la presencia digital de cada marca.</p>
+                    <img width="700px" class="gif-info" src="assets/img/emoji.png" alt="gift emojis" class="gift">
+                </div>
+            </div>
+            <img src="assets/img/social-media.png" alt="imagenes social media" class="img-info">
+            <img src="assets/img/social-media-cel.png" alt="imagenes social media" class="img-info-cel">
+
+
+            <div class="container gris">
+                <div class="titulo-gris"><h2 class="white">Multimedia</h2></div>
+                <div class="info container-disenos">
+                    <p class="textwhite">En el área multimedia, he trabajado en la edición de videos y animaciones básicas en distintos proyectos, aportando soluciones visuales en redes sociales y presentaciones corporativas. Estas ediciones han sido clave para comunicar de manera efectiva los mensajes de las marcas y generar mayor impacto visual.</p>
+                    <img width="500px" class="gift" src="assets/img/multimedia.gif" alt="multimedia" >
+                </div>
+            </div>
+            <video class="video-info" controls width="100%" poster="assets/img/multi.jpg">
+                <source src="assets/video/multimedia.mp4" type="video/mp4">
+            </video>
+
+            <div class="container aqua">
+                <div class="titulo"><h2 class="white">Packaging</h2></div>
+                <div class="info container-disenos">
+                    <p class="textwhite">Durante mis estudios universitarios, realicé varios proyectos de diseño de packaging, donde me enfoqué en desarrollar envases funcionales y atractivos. Estos proyectos me permitieron explorar la estética y los aspectos técnicos del empaque, asegurando que cada diseño cumpliera tanto con la identidad de la marca como con su funcionalidad.</p>
+                    <img width="500px" class="gif-info" src="assets/img/caja.png" alt="imagen de cajas">
+                </div>
+            </div>
+            <img src="assets/img/packing.png" alt="mockup de diseño de packaging" class="img-info">
+            <img src="assets/img/packing-cel.png" alt="mockup de diseño de packaging" class="img-info-cel">
+
+
+            <div class="container gris">
+                <div class="titulo-gris"><h2 class="white">Diseño Editorial</h2></div>
+                <div class="info container-disenos">
+                    <p class="textwhite">He trabajado en diseño editorial en diferentes contextos, tanto en proyectos universitarios como freelance. He diseñado revistas, folletos y material impreso, combinando una estética equilibrada con una clara jerarquía de información. Estos proyectos me han permitido desarrollar habilidades en la maquetación y la creación de piezas editoriales que comunican de forma eficaz y visualmente atractiva.</p>
+                    <img width="500px" class="gift" src="assets/img/revista.gif" alt="gif de una revista">
+                </div>
+            </div>
+            <div style="position:relative;padding-top:0;width:100vw;height:700px;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/pcclp/wueb/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
+            
+        </section>
+	</main>
+	
+
+    <div id="modalPopup" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>¡Explora mis proyectos y déjame ayudarte a dar vida a tus ideas!</p>
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+    <script src="js/modalpopup.js"></script>
+	<script src="js/dropdown.js"></script>
+    <script src="js/animation-show.js"></script>
 </body>
 </html>
