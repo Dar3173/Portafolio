@@ -23,14 +23,10 @@
     font-weight: bold;
 }
 
-.img {
+.img-celular {
     position: relative;
     width: 700px;
     z-index: 1;
-}
-
-.img-celular {
-    display: none;
 }
 
 .container {
@@ -190,10 +186,6 @@
     
     .contenedor-img{
         position: static;
-    }
-    
-    .img {
-        display: none;
     }
     
     .img-celular {

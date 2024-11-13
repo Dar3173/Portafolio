@@ -11,7 +11,7 @@
 .logo {
     width: 80px;
     object-fit: cover;
-	cursor: pointer;
+    cursor: pointer;
     z-index: 3;
 }
 
@@ -30,7 +30,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    bottom:0;
+    bottom: 0;
     padding-top: 100px;
     overflow-y: hidden;
     transition: transform 0.5s;
@@ -52,13 +52,14 @@
     border-bottom: 3px solid white;
 } 
 
-.container-svg div a span{
+.container-svg div a span {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center; /* Centra horizontalmente */
     width: 100%;
-    margin-bottom: 30px;
+    height: 100px; /* Ajusta según el tamaño del contenedor */
     cursor: pointer;
+    text-align: center; /* Asegura que el texto se mantenga centrado */
 }
 
 .container-svg a {
@@ -72,15 +73,8 @@
     color: var(--aqua-oscuro);
 }
 
-.title_menu {
-    padding-bottom: 40px;
-    font-size: 25px;
-    font-weight: 800;
-}
-
-
 @media screen and (max-width: 600px) {
-    .menu{
+    .menu {
         width: 100vw;
     }
     
@@ -97,11 +91,10 @@
         height: 100vh;
         overflow-y: visible;
     }
-     
 }
 
 @media screen and (max-width: 1024px) {
-    #aside{
+    #aside {
         width: 100vw;
         height: 100vh;
         overflow-y: visible;
