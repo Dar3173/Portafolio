@@ -3,6 +3,10 @@ body {
     background-size: cover;
 }
 
+html, body {
+	overflow-x: hidden;
+}
+
 #welcome{
 	display: flex;
     align-items: center;

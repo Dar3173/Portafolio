@@ -25,7 +25,7 @@
 
 .img-celular {
     position: relative;
-    width: 700px;
+    width: 400px;
     z-index: 1;
 }
 
@@ -251,7 +251,7 @@
     }
     
     .img-celular{
-        width: 55vw;
+        width: 35vw;
     }
 
     .gif-info, .gift { 
