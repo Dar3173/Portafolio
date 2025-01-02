@@ -74,6 +74,76 @@
 
 
 
+/*estilo footer*/
+.footer {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    background: var(--gris-oscuro);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icon-elem {
+    list-style: none;
+}
+
+.icon {
+    color: white;
+    font-size: 50px;
+    display: inline-block;
+    margin: 0 20px;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+
+.menu-footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem-footer {
+    list-style: none;
+}
+
+.menu-icon-footer {
+    color: white;
+    font-size: 20px;
+    font-family: var(--texto);
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 20px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.menu-icon-footer:hover {
+    opacity: 1;
+}
+
+
+
 @media screen and (max-width: 600px) {
     .menu{
         width: 100vw;

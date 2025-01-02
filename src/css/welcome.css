@@ -114,7 +114,7 @@
 
 /* Estilos del modal */
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -122,6 +122,8 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.752);
     z-index: 1000;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
@@ -129,9 +131,8 @@
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 280px;
-    top: 3%;
-    left: 74%; 
+    width: 90%; 
+    max-width: 500px; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     color: var(--aqua);
@@ -139,27 +140,30 @@
     font-style: italic;
     font-size: 20px;
     font-weight: 600;
+    transform: scale(1); /* Opcional: animación */
+    transition: transform 0.3s ease-in-out; /* Para darle un toque de suavidad */
 }
 
-.arrow {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;  
-    border-bottom: 15px solid transparent; 
-    border-right: 15px solid transparent;  
-    border-left: 15px solid #fff; 
-    top: 30%;  
-    left: 100%; 
-    transform: translateY(-50%); 
+.modal-content.show {
+    transform: scale(1);
 }
+
+.modal-image {
+    width: 100%;
+    max-width: 500px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
 
 .close {
     position: absolute;
-    top: 5px;
+    top: 2px;
     right: 10px;
-    font-size: 25px;
-    color: var(--rosa);
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--gris-oscuro);
     cursor: pointer;
 }
 
@@ -230,10 +234,19 @@
 
     /*estilo de modal*/
     .modal-content {
-        width: 200px;
-        top: 10px;
-        left:10px;
-        font-size: 15px;
+        width: 85%; 
+        font-size: 18px; 
+        padding: 15px; 
+    }
+
+    .close {
+        font-size: 25px; 
+        top: 5px;
+        right: 5px;
+    }
+
+    .modal-image {
+        max-width: 100%; 
     }
 }
 
@@ -264,8 +277,17 @@
 
     /*estilo modal*/
     .modal-content {
-        top: 2%;
-        left: 24%;
+        width: 80%; 
+        font-size: 20px; 
+        padding: 20px;
+    }
+
+    .close {
+        font-size: 30px; 
+    }
+
+    .modal-image {
+        max-width: 80%;
     }
 }
 

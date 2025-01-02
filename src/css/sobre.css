@@ -40,11 +40,12 @@
     color: var(--gris-oscuro);
     font-family: var(--texto);
     text-align: justify;
-    font-size: 20px
+    font-size: 18px;
 }
 
 button {
     background: var(--rosa);
+    background: radial-gradient(circle, rgba(255,111,97,1) 50%, rgba(214,78,68,1) 100%);
 	padding: 10px 40px;
     margin-top: 20px;
 	border: none;
@@ -58,6 +59,7 @@ button {
 
 .container-programas {
     background: var(--lavanda);
+    background: linear-gradient(180deg, rgba(197,202,233,1) 33%, rgba(151,158,198,1) 89%);
     display: flex;
     justify-content: space-between;
     padding: 30px;
